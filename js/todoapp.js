@@ -1,35 +1,30 @@
-const itemList = document.getElementsByTagName('li');
-for (let i = 0; i < itemList.length; i++) {
-	let createSpan = document.createElement('span');
-	let createText = document.createTextNode('\u00D7');
-	createSpan.className = 'close';
-	createSpan.appendChild(createText);
-	itemList[i].appendChild(createSpan);
-}
+// const itemList = document.getElementsByTagName('li');
+// for (let i = 0; i < itemList.length; i++) {
+// 	let createSpan = document.createElement('span');
+// 	let createText = document.createTextNode('\u00D7');
+// 	createSpan.className = 'close';
+// 	createSpan.appendChild(createText);
+// 	itemList[i].appendChild(createSpan);
+// }
 
-let close = document.getElementsByClassName('close');
-for (let index = 0; index < close.length; index++) {
-	close[index].onclick = function() {
-		let section = this.parentElement;
-		section.style.display = 'none';
-	};
-}
+// let close = document.getElementsByClassName('close');
+// for (let index = 0; index < close.length; index++) {
+// 	close[index].onclick = function() {
+// 		let section = this.parentElement;
+// 		section.style.display = 'none';
+// 	};
+// }
 
-let listItem = document.querySelector('UL');
-listItem.addEventListener(
-	'click',
-	function(event) {
-		if (event.target.tagName === 'LI') {
-			event.target.classList.toggle('checked');
-		}
-	},
-	false
-);
-
-// let li = document.createElement('li');
-
-// let checked = document.getElementById('checked');
-// document.getElementById('completedTasks').appendChild(checked);
+// let listItem = document.querySelector('UL');
+// listItem.addEventListener(
+// 	'click',
+// 	function(event) {
+// 		if (event.target.tagName === 'LI') {
+// 			event.target.classList.toggle('checked');
+// 		}
+// 	},
+// 	false
+// );
 
 function newElement() {
 	let li = document.createElement('li');
@@ -49,6 +44,11 @@ function newElement() {
 	span.className = 'close';
 	span.appendChild(txt);
 	li.appendChild(span);
+	li.onclick = function() {
+		if (li.className == "checked") {
+		}
+		console.log(li.className);
+	}
 
 	for (i = 0; i < close.length; i++) {
 		close[i].onclick = function() {
@@ -57,3 +57,9 @@ function newElement() {
 		};
 	}
 }
+
+// let taskCompleted = function() {
+// 	document.querySelectorAll('checked').forEach(function(checked) {
+// 		checked.appendChild(document.querySelector('completedTasks'));
+// 	});
+// };

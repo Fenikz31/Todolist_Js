@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="headerfield" class="header">
+        <h2>My Todo List</h2>
+        <input type="text" id="taskInput" placeholder="Enter your task....">
+        <span onclick="newElement()" class="addButton">Add</span>
+    </header>
+    <h3 id="idTodo">TODO</h3>
+    <ul id=taskList>
+        <li class="checked">End this project</li>
+        <li>Continue my TDD RPG Kata</li>
+        <li>Install the swimming pool</li>
+        <li>Get some more beers</li>
+        <li>Take out the trash</li>
+    </ul>
+    <div></div>
+    <h3 id="idCompleted">COMPLETED</h3>
+    <ul id="completedTasks">
+        
+    </ul>
+    <script src="/js/todoapp.js"></script>
+    
+</body>
+<footer>
+    <p>&copyFenikz - fenikz31@gmail.com</p>
+</footer>
+</html>
